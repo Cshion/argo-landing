@@ -71,8 +71,8 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-bold text-slate-900 mb-1">Escríbenos Directamente</h3>
-                                    <p className="text-slate-500 mb-1 text-sm">contacto@argo.pe</p>
-                                    <p className="text-slate-500 text-sm">+51 999 999 999</p>
+                                    <p className="text-slate-500 mb-1 text-sm">{siteConfig.contact.email}</p>
+                                    <p className="text-slate-500 text-sm">{siteConfig.contact.displayPhone}</p>
                                 </div>
                             </div>
 
@@ -82,7 +82,7 @@ const ContactSection = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-lg font-bold text-slate-900 mb-1">Oficina Principal</h3>
-                                    <p className="text-slate-500 text-sm">Av. Javier Prado Este 1234, Lima, Perú</p>
+                                    <p className="text-slate-500 text-sm">{siteConfig.contact.address}</p>
                                 </div>
                             </div>
                         </div>

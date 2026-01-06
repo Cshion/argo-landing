@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronDown } from 'lucide-react';
 import { services } from '@/data/services';
+import { siteConfig } from '@/config/site';
 import { useCalendly } from '@/context/CalendlyContext';
 
 const Header = () => {
@@ -28,34 +29,39 @@ const Header = () => {
                 </div>
 
                 <nav className="hidden md:flex gap-8 items-center">
-                    <Link href="/nosotros" className="text-base font-medium text-gray-700 hover:text-accent transition-colors">Nosotros</Link>
-
-                    {/* Services Dropdown */}
-                    <div className="relative group">
-                        <Link href="/servicios" className="flex items-center gap-1 text-base font-medium text-gray-700 hover:text-accent transition-colors py-4">
-                            Servicios
-                            <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
-                        </Link>
-
-                        {/* Dropdown Menu */}
-                        <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 w-72">
-                            <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden p-2">
-                                {services.map((service) => (
-                                    <Link
-                                        key={service.slug}
-                                        href={`/servicios/${service.slug}`}
-                                        className="block px-4 py-3 rounded-lg hover:bg-slate-50 transition-colors"
-                                    >
-                                        <p className="font-semibold text-slate-800 text-sm mb-0.5">{service.title}</p>
-                                        <p className="text-xs text-slate-500 line-clamp-1">{service.description}</p>
+                    {siteConfig.nav.main.map((item) => {
+                        if (item.title === "Servicios") {
+                            return (
+                                <div key={item.title} className="relative group">
+                                    <Link href={item.href} className="flex items-center gap-1 text-base font-medium text-gray-700 hover:text-accent transition-colors py-4">
+                                        {item.title}
+                                        <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
                                     </Link>
-                                ))}
-                            </div>
-                        </div>
-                    </div>
 
-                    <Link href="/proyectos" className="text-base font-medium text-gray-700 hover:text-accent transition-colors">Proyectos</Link>
-                    <Link href="/#contacto" className="text-base font-medium text-gray-700 hover:text-accent transition-colors">Contacto</Link>
+                                    {/* Dropdown Menu */}
+                                    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2 w-72">
+                                        <div className="bg-white rounded-xl shadow-xl border border-gray-100 overflow-hidden p-2">
+                                            {services.map((service) => (
+                                                <Link
+                                                    key={service.slug}
+                                                    href={`/servicios/${service.slug}`}
+                                                    className="block px-4 py-3 rounded-lg hover:bg-slate-50 transition-colors"
+                                                >
+                                                    <p className="font-semibold text-slate-800 text-sm mb-0.5">{service.title}</p>
+                                                    <p className="text-xs text-slate-500 line-clamp-1">{service.description}</p>
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                </div>
+                            );
+                        }
+                        return (
+                            <Link key={item.title} href={item.href} className="text-base font-medium text-gray-700 hover:text-accent transition-colors">
+                                {item.title}
+                            </Link>
+                        );
+                    })}
                 </nav>
 
                 <div className="hidden md:flex">
