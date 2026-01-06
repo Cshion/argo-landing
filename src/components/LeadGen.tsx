@@ -3,6 +3,8 @@
 import { useState } from 'react';
 import Image from 'next/image';
 
+import { siteConfig } from '@/config/site';
+
 const LeadGen = () => {
     const [area, setArea] = useState('');
     const [projectType, setProjectType] = useState('vivienda');
@@ -16,6 +18,13 @@ const LeadGen = () => {
         // Fake logic: Assume $20/m2 savings
         const savings = areaNum * 20;
         setResult(savings);
+    };
+
+    const handleRequestReport = () => {
+        if (!result) return;
+        const message = `Hola Argo, utilicé su calculadora y estimé un ahorro de $${result.toLocaleString()} USD para mi proyecto de ${projectType} de ${area} m². Me gustaría recibir un reporte detallado y asesoría.`;
+        const url = `https://wa.me/${siteConfig.contact.phone}?text=${encodeURIComponent(message)}`;
+        window.open(url, '_blank');
     };
 
     return (
@@ -96,7 +105,10 @@ const LeadGen = () => {
                                     <p className="text-xs text-slate-400 mb-8 bg-slate-50 py-2 px-4 rounded-lg inline-block">*Estimado basado en reducción de desperdicios del 5%.</p>
 
                                     <div className="space-y-3">
-                                        <button className="w-full bg-accent hover:bg-blue-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all mb-4">
+                                        <button
+                                            onClick={handleRequestReport}
+                                            className="w-full bg-accent hover:bg-blue-600 text-white font-bold py-4 rounded-xl shadow-lg hover:shadow-blue-500/30 transition-all mb-4"
+                                        >
                                             Solicitar Reporte Detallado
                                         </button>
                                         <button
