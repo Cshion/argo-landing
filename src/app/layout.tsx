@@ -33,6 +33,10 @@ export const metadata: Metadata = {
     images: [siteConfig.ogImage],
   },
   icons: siteConfig.icons,
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 import Header from "@/components/Header";
