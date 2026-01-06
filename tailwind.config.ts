@@ -1,0 +1,27 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+    content: [
+        "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+        "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    ],
+    theme: {
+        extend: {
+            colors: {
+                background: "var(--background)",
+                foreground: "var(--foreground)",
+                primary: "#023e8a", // Deeper Royal Blue (Aligning with potential Logo)
+                secondary: "#ffffff",
+                accent: "#0077b6", // Brighter Blue for accents
+                "text-primary": "#1e293b",
+                "text-secondary": "#64748b",
+            },
+            fontFamily: {
+                sans: ['Inter', 'sans-serif'],
+            },
+        },
+    },
+    plugins: [],
+};
+export default config;
