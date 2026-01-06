@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import ProjectsGrid from '@/components/ProjectsGrid';
 import ContactSection from '@/components/ContactSection';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { siteConfig } from '@/config/site';
 
 export const metadata: Metadata = {
@@ -63,7 +64,12 @@ export default function ProjectsPage() {
                 </div>
             </section>
 
-            <ProjectsGrid />
+            <section className="py-12 bg-slate-50">
+                <div className="container mx-auto px-6">
+                    <Breadcrumbs className="text-slate-500 mb-8" />
+                    <ProjectsGrid />
+                </div>
+            </section>
 
             <ContactSection />
         </main>

@@ -1,9 +1,11 @@
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
+import Link from 'next/link';
 import { services } from '@/data/services';
 import { siteConfig } from '@/config/site';
 import ContactSection from '@/components/ContactSection';
-import { CheckCircle } from 'lucide-react';
+import Breadcrumbs from '@/components/Breadcrumbs';
+import { CheckCircle, ArrowLeft } from 'lucide-react';
 import type { Metadata } from 'next';
 
 interface Props {
@@ -72,6 +74,7 @@ export default async function ServicePage({ params }: Props) {
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10 pt-12 text-center">
+
                     <div className="flex justify-center mb-8">
                         <div className="w-20 h-20 bg-white/5 backdrop-blur-md rounded-2xl flex items-center justify-center border border-white/10 shadow-2xl">
                             <service.icon className="w-10 h-10 text-white" />
@@ -88,6 +91,10 @@ export default async function ServicePage({ params }: Props) {
             {/* Main Content */}
             <section className="py-24">
                 <div className="container mx-auto px-6">
+                    <div className="mb-12">
+                        <Breadcrumbs className="text-slate-500 justify-center md:justify-start" />
+                    </div>
+
                     {/* Benefits Section - New Interactive Content */}
                     {service.benefits && (
                         <div className="mb-24">

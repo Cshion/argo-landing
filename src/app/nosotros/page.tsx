@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import ContactSection from '@/components/ContactSection';
+import Breadcrumbs from '@/components/Breadcrumbs';
 import { Target, Eye, Shield, Users, Lightbulb, Zap } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -41,6 +42,10 @@ export default function NosotrosPage() {
             {/* Mission & Vision */}
             <section className="py-20 lg:py-32">
                 <div className="container mx-auto px-6">
+                    <div className="mb-12">
+                        <Breadcrumbs className="text-slate-500 justify-center md:justify-start" />
+                    </div>
+
                     <div className="grid md:grid-cols-2 gap-16 lg:gap-24">
                         {/* Misión */}
                         <div className="flex flex-col gap-6">

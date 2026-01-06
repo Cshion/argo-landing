@@ -1,3 +1,4 @@
+import Breadcrumbs from '@/components/Breadcrumbs';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
@@ -40,6 +41,10 @@ export default function ServiciosPage() {
 
             <section className="py-20 lg:py-24">
                 <div className="container mx-auto px-6">
+                    <div className="mb-12">
+                        <Breadcrumbs className="text-slate-500 justify-center md:justify-start" />
+                    </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 lg:gap-12">
                         {services.map((service, index) => (
                             <div key={index} className="group bg-white p-8 md:p-12 rounded-3xl shadow-sm border border-slate-100 hover:shadow-2xl hover:shadow-blue-900/5 hover:-translate-y-2 transition-all duration-500 flex flex-col items-start relative overflow-hidden">

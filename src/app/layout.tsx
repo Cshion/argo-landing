@@ -61,11 +61,24 @@ export default function RootLayout({
               url: siteConfig.url,
               logo: `${siteConfig.url}${siteConfig.ogImage}`,
               description: siteConfig.description,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: siteConfig.contact.address,
+                addressLocality: "Lima",
+                addressCountry: "PE"
+              },
+              contactPoint: {
+                "@type": "ContactPoint",
+                telephone: siteConfig.contact.displayPhone,
+                contactType: "customer service",
+                areaServed: "PE",
+                availableLanguage: "Spanish"
+              },
               sameAs: [
-                siteConfig.links.linkedin,
-                siteConfig.links.instagram,
-                siteConfig.links.facebook,
-                siteConfig.links.youtube,
+                siteConfig.socialLinks.linkedin,
+                siteConfig.socialLinks.instagram,
+                siteConfig.socialLinks.facebook,
+                siteConfig.socialLinks.youtube,
               ],
             }),
           }}
