@@ -17,18 +17,18 @@ const Footer = () => {
                         <ul className="space-y-3 text-sm">
                             <li><Link href="/nosotros" className="hover:text-white transition-colors">Nosotros</Link></li>
                             <li><Link href="/servicios" className="hover:text-white transition-colors">Servicios</Link></li>
-                            <li><Link href="#proyectos" className="hover:text-white transition-colors">Proyectos</Link></li>
-                            <li><Link href="#contacto" className="hover:text-white transition-colors">Trabaja con nosotros</Link></li>
+                            <li><Link href="/proyectos" className="hover:text-white transition-colors">Proyectos</Link></li>
+                            <li><Link href="/#contacto" className="hover:text-white transition-colors">Trabaja con nosotros</Link></li>
                         </ul>
                     </div>
 
                     <div>
                         <h4 className="text-white font-bold text-lg mb-6">Servicios</h4>
                         <ul className="space-y-3 text-sm">
-                            <li><Link href="#" className="hover:text-white transition-colors">Modelado BIM</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Coordinación VDC</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Auditoría Técnica</Link></li>
-                            <li><Link href="#" className="hover:text-white transition-colors">Implementación</Link></li>
+                            <li><Link href="/servicios/modelamiento-bim-vdc" className="hover:text-white transition-colors">Modelado BIM</Link></li>
+                            <li><Link href="/servicios/modelamiento-bim-vdc" className="hover:text-white transition-colors">Coordinación VDC</Link></li>
+                            <li><Link href="/servicios/auditoria-modelos" className="hover:text-white transition-colors">Auditoría Técnica</Link></li>
+                            <li><Link href="/servicios/consultoria-implementacion" className="hover:text-white transition-colors">Implementación</Link></li>
                         </ul>
                     </div>
 

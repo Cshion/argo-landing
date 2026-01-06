@@ -39,7 +39,7 @@ const Hero = () => {
                             <div className="absolute inset-0 bg-white/20 transform -skew-x-12 -translate-x-full group-hover:animate-shine"></div>
                         </Link>
 
-                        <Link href="#proyectos" className="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-xl font-bold text-lg transition-all hover:bg-white/10 hover:border-white/30">
+                        <Link href="/proyectos" className="px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white rounded-xl font-bold text-lg transition-all hover:bg-white/10 hover:border-white/30">
                             Ver Proyectos
                         </Link>
                     </div>
