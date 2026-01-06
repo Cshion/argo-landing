@@ -113,7 +113,7 @@ export default async function ServicePage({ params }: Props) {
                         </div>
                     )}
 
-                    <div className="grid lg:grid-cols-2 gap-16 items-start mb-24">
+                    <div className="grid lg:grid-cols-2 gap-16 items-start mb-12">
                         <div>
                             <h2 className="text-3xl font-bold text-slate-900 mb-6">Descripción del Servicio</h2>
                             <p className="text-lg text-slate-600 leading-relaxed mb-8">
