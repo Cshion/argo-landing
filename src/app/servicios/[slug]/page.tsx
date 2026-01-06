@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { services } from '@/data/services';
 import { siteConfig } from '@/config/site';
+import ContactSection from '@/components/ContactSection';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 import BookCallButton from '@/components/BookCallButton';
 import type { Metadata } from 'next';
@@ -115,6 +116,8 @@ export default async function ServicePage({ params }: Props) {
                     </div>
                 </div>
             </section>
+
+            <ContactSection />
         </main>
     );
 }

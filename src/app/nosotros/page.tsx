@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import ContactSection from '@/components/ContactSection';
 import { Target, Eye, Shield, Users, Lightbulb, Zap } from 'lucide-react';
 import type { Metadata } from 'next';
 
@@ -104,15 +105,8 @@ export default function NosotrosPage() {
                 </div>
             </section>
 
-            {/* CTA */}
-            <section className="py-24 bg-slate-900 text-white text-center">
-                <div className="container mx-auto px-6">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-8">¿Listo para transformar tu próximo proyecto?</h2>
-                    <Link href="/#contacto" className="inline-block px-8 py-4 bg-accent hover:bg-blue-600 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-500/25">
-                        Hablemos Hoy
-                    </Link>
-                </div>
-            </section>
+            {/* Contact Section */}
+            <ContactSection />
         </main>
     );
 }
