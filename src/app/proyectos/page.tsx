@@ -47,6 +47,8 @@ export default function ProjectsPage() {
                         fill
                         className="object-cover opacity-30"
                         priority
+                        sizes="100vw"
+                        quality={85}
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
                 </div>
