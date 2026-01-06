@@ -13,6 +13,10 @@ export const siteConfig = {
         tiktok: "https://tiktok.com",
         linkedin: "https://linkedin.com",
         youtube: "https://youtube.com",
+        whatsapp: "https://wa.me/51999999999", // Placeholder
+    },
+    contact: {
+        phone: "51999999999", // Placeholder for logic
     },
     icons: {
         icon: '/favicon.ico',

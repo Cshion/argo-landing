@@ -41,6 +41,7 @@ import Footer from "@/components/Footer";
 // ... (keep metadata part unchanged, assuming it's above line 32)
 
 import { Providers } from "@/components/Providers";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 export default function RootLayout({
   children,
@@ -74,6 +75,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+        <FloatingWhatsApp />
       </body>
     </html>
   );

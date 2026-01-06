@@ -3,6 +3,9 @@
 import { Mail, Calendar, Phone, MapPin, ArrowRight, Send } from 'lucide-react';
 import { useState } from 'react';
 import { useCalendly } from '@/context/CalendlyContext';
+import { siteConfig } from '@/config/site';
+
+// ... (imports)
 
 const ContactSection = () => {
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
@@ -15,8 +18,17 @@ const ContactSection = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate API call
-        await new Promise(resolve => setTimeout(resolve, 1500));
+
+        // Construct WhatsApp Message
+        const message = `Hola Argo, mi nombre es ${formState.name}.\nEmail: ${formState.email}\n\n${formState.message}`;
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${siteConfig.contact.phone}?text=${encodedMessage}`;
+
+        // Simulate short delay for UX then redirect
+        await new Promise(resolve => setTimeout(resolve, 800));
+
+        window.open(whatsappUrl, '_blank');
+
         setIsSubmitting(false);
         setSubmitted(true);
     };
