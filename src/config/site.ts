@@ -20,17 +20,17 @@ export const siteConfig = {
         ]
     },
     contact: {
-        phone: "51999999999",
+        phone: "51994435337",
         email: "contacto@argo.pe",
         address: "Av. Javier Prado Este 1234, Lima, Perú",
-        displayPhone: "+51 999 999 999",
+        displayPhone: "+51 994 435 337",
     },
     socialLinks: {
         instagram: "https://instagram.com",
         facebook: "https://facebook.com",
         linkedin: "https://linkedin.com",
         youtube: "https://youtube.com",
-        whatsapp: "https://wa.me/51999999999",
+        whatsapp: "https://wa.me/51994435337",
     },
     links: { // Keeping for backward compatibility if needed, but socialLinks is preferred
         twitter: "https://twitter.com/argo",
@@ -40,7 +40,7 @@ export const siteConfig = {
         tiktok: "https://tiktok.com",
         linkedin: "https://linkedin.com",
         youtube: "https://youtube.com",
-        whatsapp: "https://wa.me/51999999999",
+        whatsapp: "https://wa.me/51994435337",
     },
     icons: {
         icon: '/favicon.ico',
