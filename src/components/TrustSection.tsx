@@ -32,19 +32,19 @@ const TrustSection = () => {
                     </div>
 
                     {/* Certifications Strip */}
-                    <div className="flex flex-col items-center gap-6 mt-4">
-                        <p className="text-sm font-semibold text-gray-400 uppercase tracking-widest">Respaldados por:</p>
-                        <div className="flex flex-wrap justify-center gap-8 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
-                            <div className="h-16 w-32 relative flex items-center justify-center">
+                    <div className="flex flex-col items-center gap-8 mt-4">
+                        <p className="text-xl md:text-2xl font-bold text-slate-400 uppercase tracking-widest">Respaldados por:</p>
+                        <div className="flex flex-wrap justify-center gap-12 opacity-90 grayscale hover:grayscale-0 transition-all duration-500">
+                            <div className="h-24 w-48 relative flex items-center justify-center">
                                 <Image src="/logos/iso-19650.png" alt="ISO 19650" fill className="object-contain" />
                             </div>
-                            <div className="h-16 w-32 relative flex items-center justify-center">
+                            <div className="h-24 w-48 relative flex items-center justify-center">
                                 <Image src="/logos/autodesk-partner.png" alt="Autodesk Partner" fill className="object-contain" />
                             </div>
-                            <div className="h-16 w-32 relative flex items-center justify-center">
+                            <div className="h-24 w-48 relative flex items-center justify-center">
                                 <Image src="/logos/pmi-member.png" alt="PMI Member" fill className="object-contain" />
                             </div>
-                            <div className="h-16 w-32 relative flex items-center justify-center">
+                            <div className="h-24 w-48 relative flex items-center justify-center">
                                 <Image src="/logos/plan-bim.png" alt="Plan BIM" fill className="object-contain" />
                             </div>
                         </div>

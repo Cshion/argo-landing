@@ -42,13 +42,13 @@ export default function ProjectsPage() {
             <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-900 border-b border-white/10">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/hero_bg_bim.png"
-                        alt="Proyectos BIM"
+                        src="/hero_projects_modern.png"
+                        alt="Proyectos BIM Modernos"
                         fill
-                        className="object-cover opacity-20"
+                        className="object-cover opacity-30"
                         priority
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10 text-center">
