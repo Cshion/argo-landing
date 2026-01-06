@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { services } from '@/data/services';
+import { siteConfig } from '@/config/site';
 import { CheckCircle, ArrowLeft } from 'lucide-react';
 import BookCallButton from '@/components/BookCallButton';
 import type { Metadata } from 'next';
@@ -37,8 +38,27 @@ export default async function ServicePage({ params }: Props) {
         notFound();
     }
 
+    const jsonLd = {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": service.title,
+        "description": service.description,
+        "provider": {
+            "@type": "Organization",
+            "name": siteConfig.name,
+            "url": siteConfig.url
+        },
+        "areaServed": "Peru",
+        "serviceType": service.title,
+        "url": `${siteConfig.url}/servicios/${service.slug}`
+    };
+
     return (
         <main className="min-h-screen bg-white">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
             {/* Hero */}
             <section className="relative h-[60vh] min-h-[500px] flex items-center text-white overflow-hidden">
                 <div className="absolute inset-0 z-0">
