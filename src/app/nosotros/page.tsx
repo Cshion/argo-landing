@@ -13,21 +13,26 @@ export default function NosotrosPage() {
     return (
         <main className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="relative h-[60vh] min-h-[500px] flex items-center justify-center text-white overflow-hidden">
+            <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden bg-slate-900 border-b border-white/10">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="/about-bg.png"
-                        alt="Background Sobre Nosotros"
+                        src="/hero_about_clean.png"
+                        alt="Equipo Argo"
                         fill
-                        className="object-cover"
+                        className="object-cover opacity-30"
                         priority
                     />
-                    <div className="absolute inset-0 bg-slate-900/70"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/60 to-transparent" />
                 </div>
 
                 <div className="container mx-auto px-6 relative z-10 text-center">
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 tracking-tight">Sobre Argo</h1>
-                    <p className="text-xl md:text-2xl text-gray-200 max-w-3xl mx-auto leading-relaxed">
+                    <span className="inline-block py-1 px-3 rounded-full bg-blue-500/10 border border-blue-400/20 text-blue-400 text-sm font-semibold mb-6 tracking-wide">
+                        Sobre Argo
+                    </span>
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
+                        Liderando la <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">Transformación Digital</span>
+                    </h1>
+                    <p className="text-lg md:text-xl text-slate-300 max-w-2xl mx-auto leading-relaxed">
                         Somos la firma consultora líder en ingeniería digital que está transformando la industria de la construcción a través de la metodología BIM.
                     </p>
                 </div>
