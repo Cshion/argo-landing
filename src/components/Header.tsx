@@ -54,8 +54,8 @@ const Header = () => {
                         </div>
                     </div>
 
-                    <Link href="#proyectos" className="text-base font-medium text-gray-700 hover:text-accent transition-colors">Proyectos</Link>
-                    <Link href="#contacto" className="text-base font-medium text-gray-700 hover:text-accent transition-colors">Contacto</Link>
+                    <Link href="/proyectos" className="text-base font-medium text-gray-700 hover:text-accent transition-colors">Proyectos</Link>
+                    <Link href="/#contacto" className="text-base font-medium text-gray-700 hover:text-accent transition-colors">Contacto</Link>
                 </nav>
 
                 <div className="hidden md:flex">
