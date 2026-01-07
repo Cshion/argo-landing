@@ -3,7 +3,7 @@
 import Image from 'next/image';
 
 const CLIENTS = [
-    { name: 'Aldesa', id: 1, logo: '/clients/logo_aldesa.webp' },
+    { name: 'Aldesa', id: 1, logo: '/clients/logo-aldesa.webp' },
     { name: 'Atis', id: 2, logo: '/clients/logo-atis.jpeg' },
     { name: 'Inti Punku', id: 3, logo: '/clients/logo-intipunku.jpg' },
     { name: 'Sacyr', id: 4, logo: '/clients/logo-sacyr.jpg' }
