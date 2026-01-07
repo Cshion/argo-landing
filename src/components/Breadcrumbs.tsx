@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ChevronRight, Home } from "lucide-react";
+import { siteConfig } from "@/config/site";
 import { services } from "@/data/services"; // Map slugs to titles
 
 const routeNameMap: Record<string, string> = {
@@ -49,13 +50,13 @@ export default function Breadcrumbs({ className = "" }: { className?: string }) 
                 "@type": "ListItem",
                 "position": 1,
                 "name": "Inicio",
-                "item": "https://argo.com" // Should match siteConfig.url
+                "item": siteConfig.url // Should match siteConfig.url
             },
             ...breadcrumbItems.map((item, index) => ({
                 "@type": "ListItem",
                 "position": index + 2,
                 "name": item.name,
-                "item": `https://argo.com${item.href}`
+                "item": `${siteConfig.url}${item.href}`
             }))
         ]
     };
